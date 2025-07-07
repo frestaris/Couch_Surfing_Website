@@ -1,4 +1,5 @@
 import "./SearchBar.css";
+import { FaSearch } from "react-icons/fa";
 
 function SearchBar({ scrolled }) {
   return (
@@ -19,7 +20,11 @@ function SearchBar({ scrolled }) {
         aria-label="Search"
         className="search-submit-button"
       >
-        <span className="label">Search</span>
+        {scrolled ? (
+          <FaSearch size={16} />
+        ) : (
+          <span className="label">Search</span>
+        )}
       </button>
     </div>
   );
