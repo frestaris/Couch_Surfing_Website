@@ -1,35 +1,62 @@
 .hero {
-  height: 100vh;
-  background: url("https://www.byhours.com/assets/images/hero.jpg") center/cover
-    no-repeat;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
   color: white;
   padding: 2rem;
 }
+.hero-text-content {
+  color: black;
+}
+.hero-title {
+  font-size: 6rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+  color: #000;
+}
 
-.hero-content {
-  background-color: rgba(0, 0, 0, 0.5);
+.hero-subtitle {
+  font-size: 1.25rem;
+  color: #97999b;
+}
+.hero-image {
+  background: url("https://images.byhours.com/img-web/home/background.webp?width=2000/height=700/format=webp/quality=80")
+    center/cover no-repeat;
+  width: 80%;
+  height: 180px;
   padding: 2rem;
-  border-radius: 8px;
+  border-radius: 20px;
+  box-shadow: 0 4px 6px -2px rgba(0, 0, 0, 0.15);
 }
 
 .search-wrapper {
   transition: opacity 0.5s ease, transform 0.5s ease;
   opacity: 1;
   transform: translateY(0);
+  max-width: 100%;
+  margin: -30px auto;
 }
 
 .search-wrapper.hidden {
   display: none;
   pointer-events: none;
-  transform: translateY(20px);
 }
 
 .search-wrapper.visible {
   opacity: 1;
   pointer-events: auto;
   transform: translateY(0);
+}
+
+@media (max-width: 450px) {
+  .hero-title {
+    font-size: 3rem;
+    margin-top: 5rem;
+  }
+  .input-group {
+    border: 1px solid #e5e5e5;
+    box-shadow: 0 4px 6px -2px rgba(0, 0, 0, 0.15);
+  }
 }

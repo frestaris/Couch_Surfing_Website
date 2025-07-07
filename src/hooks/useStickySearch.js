@@ -7,8 +7,8 @@ export function useStickySearch(heroId = "hero") {
     function handleScroll() {
       const hero = document.getElementById(heroId);
       if (!hero) return;
-      const heroHeight = hero.offsetHeight;
-      setShowStickySearch(window.scrollY > heroHeight / 2);
+      const scrollThreshold = 450;
+      setShowStickySearch(window.scrollY > scrollThreshold);
     }
 
     window.addEventListener("scroll", handleScroll);
